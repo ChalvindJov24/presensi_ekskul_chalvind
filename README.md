@@ -29,16 +29,24 @@ Dibangun dengan PHP native, MySQL, dan Tailwind CSS. Data disimpan dalam **satu 
 presensi_ekskul_chalvind/
 ├── assets/
 │   ├── css/app.css          # hasil build Tailwind (tidak di-commit)
-│   └── js/app.js            # skrip global
+│   └── js/app.js            # skrip global (konfirmasi hapus)
 ├── config/
 │   └── koneksi.php          # koneksi database + fungsi bantu
 ├── database/
 │   └── presensi_ekskul.sql  # script pembuatan database dan tabel
 ├── includes/
+│   ├── fungsi.php           # helper badge, format tanggal, validasi
+│   ├── form-presensi.php    # partial form (dipakai tambah & edit)
 │   ├── header.php
 │   └── footer.php
 ├── resources/
 │   └── css/input.css        # sumber Tailwind
+├── index.php                # daftar presensi (Read)
+├── tambah.php               # form tambah (Create)
+├── simpan.php               # proses simpan (Create)
+├── edit.php                 # form edit (Update)
+├── update.php               # proses perbarui (Update)
+├── hapus.php                # proses hapus (Delete)
 ├── eslint.config.js
 ├── package.json
 └── README.md
@@ -80,6 +88,26 @@ npm run build
 ```
 http://localhost/presensi_ekskul_chalvind/
 ```
+
+## Cara Pakai Aplikasi
+
+1. Halaman **Daftar Presensi** (`index.php`) menampilkan seluruh catatan dalam bentuk tabel,
+   diurutkan dari tanggal terbaru.
+2. Klik **Tambah Presensi** (`tambah.php`), isi form, lalu klik **Simpan**.
+3. Klik **Edit** pada sebuah baris untuk mengubah data (`edit.php`), lalu klik **Perbarui**.
+4. Klik **Hapus** pada sebuah baris, lalu setujui dialog konfirmasi untuk menghapus data.
+
+Setiap field divalidasi di sisi server. Bila ada yang tidak sesuai, form akan menampilkan
+pesan error di bawah field terkait dan input sebelumnya tidak hilang.
+
+| Field            | Aturan                                        |
+| ---------------- | --------------------------------------------- |
+| Nama Peserta     | Wajib, 3–100 karakter                         |
+| Kelas            | Wajib, maksimal 20 karakter                   |
+| Ekstrakurikuler  | Wajib, maksimal 50 karakter                   |
+| Tanggal Kegiatan | Wajib, tanggal valid, tidak melebihi hari ini |
+| Status           | Wajib, salah satu dari Hadir/Izin/Sakit/Alpha |
+| Keterangan       | Opsional, maksimal 100 karakter               |
 
 ## Daftar Script npm
 
@@ -131,10 +159,10 @@ Diatur di `config/koneksi.php`:
 
 ## Status Pengerjaan
 
-| Fase                             | Status        |
-| -------------------------------- | ------------- |
-| Setup project, database, tooling | Selesai       |
-| Halaman daftar presensi (Read)   | Belum dimulai |
-| Tambah data (Create)             | Belum dimulai |
-| Edit data (Update)               | Belum dimulai |
-| Hapus data (Delete)              | Belum dimulai |
+| Fase                             | Status  |
+| -------------------------------- | ------- |
+| Setup project, database, tooling | Selesai |
+| Halaman daftar presensi (Read)   | Selesai |
+| Tambah data (Create)             | Selesai |
+| Edit data (Update)               | Selesai |
+| Hapus data (Delete)              | Selesai |

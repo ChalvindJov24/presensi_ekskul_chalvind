@@ -10,7 +10,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint:php": "php -l config/koneksi.php && php -l includes/header.php && php -l includes/footer.php",
+    "lint:php": "php -l index.php && php -l tambah.php && php -l simpan.php && php -l edit.php && php -l update.php && php -l hapus.php && php -l config/koneksi.php && php -l includes/header.php && php -l includes/footer.php && php -l includes/fungsi.php && php -l includes/form-presensi.php",
     "verify": "npm run lint && npm run lint:php && npm run build"
   },
   "devDependencies": {
