@@ -1,0 +1,2 @@
+# Normalisasi line ending ke LF (sesuai .editorconfig)
+* text=auto eol=lf

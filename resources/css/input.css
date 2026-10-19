@@ -1,0 +1,16 @@
+/* =====================================================================
+ * Sumber Tailwind CSS — presensi_ekskul_chalvind
+ * File ini di-compile menjadi assets/css/app.css oleh Tailwind CLI.
+ *   Build sekali : npm run build
+ *   Mode watch   : npm run dev
+ * ===================================================================== */
+
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------
+ * Sumber pemindaian class.
+ * Ditulis eksplisit agar file PHP ikut ter-scan oleh Tailwind.
+ * Path relatif terhadap file CSS ini (resources/css/).
+ * --------------------------------------------------------------------- */
+@source "../../**/*.php";
+@source "../../assets/js/**/*.js";

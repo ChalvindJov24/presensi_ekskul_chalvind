@@ -1,0 +1,8 @@
+node_modules/
+package-lock.json
+assets/css/app.css
+*.php
+
+# Dokumen planning & dokumentasi: jangan diformat otomatis
+# agar isi yang sudah direview tidak berubah.
+issue.md

@@ -1,0 +1,25 @@
+{
+  "name": "presensi_ekskul_chalvind",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistem presensi ekstrakurikuler sederhana (PHP native + MySQL + Tailwind CSS)",
+  "scripts": {
+    "build": "tailwindcss -i ./resources/css/input.css -o ./assets/css/app.css --minify",
+    "dev": "tailwindcss -i ./resources/css/input.css -o ./assets/css/app.css --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:php": "php -l config/koneksi.php && php -l includes/header.php && php -l includes/footer.php",
+    "verify": "npm run lint && npm run lint:php && npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/cli": "^4.3.3",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.3"
+  }
+}
