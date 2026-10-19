@@ -12,3 +12,6 @@ Thumbs.db
 
 # Editor
 .idea/
+
+# Dokumen planning lokal (tidak di-push ke repo)
+issue.md
