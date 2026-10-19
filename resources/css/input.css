@@ -8,6 +8,15 @@
 @import "tailwindcss";
 
 /* ---------------------------------------------------------------------
+ * Tema: font utama aplikasi.
+ * Menimpa variabel font bawaan Tailwind v4 (CSS-first config),
+ * sehingga seluruh teks otomatis memakai Poppins.
+ * --------------------------------------------------------------------- */
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ---------------------------------------------------------------------
  * Sumber pemindaian class.
  * Ditulis eksplisit agar file PHP ikut ter-scan oleh Tailwind.
  * Path relatif terhadap file CSS ini (resources/css/).
