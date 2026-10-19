@@ -31,13 +31,15 @@ $form_id = null;
 require __DIR__ . '/includes/header.php';
 ?>
 
-<div>
-    <h1 class="text-xl font-semibold text-slate-800">Tambah Presensi</h1>
-    <p class="mt-1 text-sm text-slate-500">Isi data kehadiran peserta kegiatan ekstrakurikuler.</p>
-</div>
+<div class="mx-auto max-w-2xl">
+    <div>
+        <h1 class="text-xl font-semibold text-slate-800">Tambah Presensi</h1>
+        <p class="mt-1 text-sm text-slate-500">Isi data kehadiran peserta kegiatan ekstrakurikuler.</p>
+    </div>
 
-<div class="mt-6 max-w-2xl rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-    <?php require __DIR__ . '/includes/form-presensi.php'; ?>
+    <div class="mt-6 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <?php require __DIR__ . '/includes/form-presensi.php'; ?>
+    </div>
 </div>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>
